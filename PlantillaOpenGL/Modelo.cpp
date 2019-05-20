@@ -2,10 +2,8 @@
 #include "Modelo.h"
 
 Modelo::Modelo() {
-
 	//Establecer transformaciones con una matriz identidad
 	modelo = mat4(1.0f);
-
 }
 
 void Modelo::inicializarVertexArray(GLuint posicionID, GLuint colorID, GLuint modeloID, GLuint vistaID, GLuint proyeccionID) {
@@ -13,7 +11,7 @@ void Modelo::inicializarVertexArray(GLuint posicionID, GLuint colorID, GLuint mo
 	this->modeloID = modeloID;
 	this->vistaID = vistaID;
 	this->proyeccionID = proyeccionID;
-	
+
 	//Crear un vertex array
 	glGenVertexArrays(1, &vertexArrayID);
 	glBindVertexArray(vertexArrayID);
@@ -30,9 +28,8 @@ void Modelo::inicializarVertexArray(GLuint posicionID, GLuint colorID, GLuint mo
 	glEnableVertexAttribArray(colorID);
 
 	//Especificar a OpenGL como se va a comunicar
-	glVertexAttribPointer(posicionID, 4, GL_FLOAT, 	GL_FALSE, sizeof(Vertice), 0);
+	glVertexAttribPointer(posicionID, 4, GL_FLOAT, GL_FALSE, sizeof(Vertice), 0);
 	glVertexAttribPointer(colorID, 4, GL_FLOAT, GL_FALSE, sizeof(Vertice), (void*)sizeof(vec4));
-
 }
 
 void Modelo::dibujar(GLenum modoDibujo) {

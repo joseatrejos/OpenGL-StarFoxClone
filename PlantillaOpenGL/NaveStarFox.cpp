@@ -3,16 +3,22 @@
 
 
 void NaveStarFox::actualizarMatrizModelo() {
-
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
+	modelo = rotate(modelo, -1.5708f, vec3(0.0f, 1.0f, 0.0f));
+}
 
+vec3 NaveStarFox::getCoordenadas() {
+	return coordenadas;
 }
 
 void NaveStarFox::avanzar() {
 
-	coordenadas.z += 0.01f;
+	coordenadas.z += 0.01 ;
 	actualizarMatrizModelo();
+}
+
+void NaveStarFox::rotar() {
 
 }
 

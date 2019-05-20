@@ -15,13 +15,12 @@ using namespace std;
 class Modelo {
 
 public:
-
 	vector<Vertice> vertices;
 	mat4 modelo;
 	mat4 vista;
 	mat4 proyeccion;
 
-	Shader *shader;
+	Shader* shader;
 	GLuint vertexArrayID;
 	GLuint bufferID;
 	GLuint modeloID;
