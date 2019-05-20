@@ -28,8 +28,43 @@ NaveStarFox::NaveStarFox() {
 
 
 	//=============================== N A V E  S T A R  F O X ===============================
-	
+	/*
+	//hit box
+	//izquierda
+	vertices.push_back({ vec4(-0.8f, 0.9f, -1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(1.0f, 0.9f, -1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(1.0f, -0.8f, -1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(-0.8f, -0.8f, -1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	//derecha
+	vertices.push_back({ vec4(-0.8f, 0.9f, 1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(1.0f, 0.9f, 1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(1.0f, -0.8f, 1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(-0.8f, -0.8f, 1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	//arriba
+	vertices.push_back({ vec4(-0.8f, 0.9f, -1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(1.0f, 0.9f, -1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(1.0f, 0.9f, 1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(-0.8f, 0.9f, 1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	//abajo
+	vertices.push_back({ vec4(-0.8f, -0.8f, -1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(1.0f, -0.8f, -1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(1.0f, -0.8f, 1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(-0.8f, -0.8f, 1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	//atras
+	vertices.push_back({ vec4(-0.8f, 0.9f, -1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(-0.8f, 0.9f, 1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(-0.8f, -0.8f, 1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(-0.8f, -0.8f, -1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	//enfrente
+	vertices.push_back({ vec4(1.0f, 0.9f, -1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(1.0f, 0.9f, 1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(1.0f, -0.8f, 1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	vertices.push_back({ vec4(1.0f, -0.8f, -1.2f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,1.0f) });
+	*/
+
 	//Parte Atras
+
+
 	vertices.push_back({ vec4(-0.8f, 0.6f, -0.4f, 1.0f), vec4(0.0f, 0.5f, 0.8f, 1.0f) });
 	vertices.push_back({ vec4(-0.6f, 0.6f, -0.4f, 1.0f), vec4(0.0f, 0.5f, 0.8f, 1.0f) });
 	vertices.push_back({ vec4(-0.6f, -0.6f, -0.4f, 1.0f), vec4(0.0f, 0.2f, 0.8f, 1.0f) });
