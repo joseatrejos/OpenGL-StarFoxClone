@@ -8,6 +8,7 @@ class Bala : public Modelo {
 
 public:
 	Bala();
+	void aparecer();
 	void avanzar();
 
 private:
