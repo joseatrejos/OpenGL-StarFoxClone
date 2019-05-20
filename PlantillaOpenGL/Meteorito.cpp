@@ -20,6 +20,8 @@ Meteorito::Meteorito() {
 
 	//===========================================================METEORITO========================================================================
 	
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	//PARTE ALTA ARRIBA
 	vertices.push_back({ vec4(0.25f, 0.9f, .4f, 1.0f),vec4(0.4f ,0.3f, 0.0f,1.0f) });
 	vertices.push_back({ vec4(0.25f, 0.7f, .4f, 1.0f),vec4(0.4f ,0.3f, 0.0f,1.0f) });
@@ -142,7 +144,7 @@ Meteorito::Meteorito() {
 	//CUADRADO Lateral derecho ultimo
 
 
-	//CUADRADO Lateral izq ultimo
+		//CUADRADO Lateral izq ultimo
 	vertices.push_back({ vec4(-0.9f, 0.25f, .4f, 1.0f),vec4(0.4f ,0.3f, 0.0f,1.0f) });
 	vertices.push_back({ vec4(-0.9f, -0.25f, .4f, 1.0f),vec4(0.4f ,0.3f, 0.0f,1.0f) });
 	vertices.push_back({ vec4(-0.7f, -0.25f, .4f, 1.0f),vec4(0.4f ,0.3f, 0.0f,1.0f) });
@@ -170,7 +172,7 @@ Meteorito::Meteorito() {
 
 	//CUADRADO Lateral izq ultimo
 
-	//CUADRADO Lateral derecho
+		//CUADRADO Lateral derecho
 	vertices.push_back({ vec4(0.7f, 0.35f, .2f, 1.0f),vec4(0.3f ,0.2f, 0.0f,1.0f) });
 	vertices.push_back({ vec4(0.7f, -0.35f, .2f, 1.0f),vec4(0.3f ,0.2f, 0.0f,1.0f) });
 	vertices.push_back({ vec4(0.5f, -0.35f, .2f, 1.0f),vec4(0.3f ,0.2f, 0.0f,1.0f) });
@@ -340,8 +342,51 @@ Meteorito::Meteorito() {
 	vertices.push_back({ vec4(0.25f, -0.9f, .6f, 1.0f),vec4(0.4f ,0.3f, 0.0f,1.0f) });
 
 	//PARTE ALTA Abajo
+
+
+	//HITBOX
+	//enfrente
+	vertices.push_back({ vec4(-0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, -0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+	//atras
+	vertices.push_back({ vec4(-0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, -0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+	//lateral der
+	vertices.push_back({ vec4(0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+	//lateral izq
+	vertices.push_back({ vec4(-0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, -0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, -0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+	//abajo
+	vertices.push_back({ vec4(0.9f, -0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, -0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, -0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+	//arriba
+	vertices.push_back({ vec4(0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+	//HITBOX
 	
 	//===========================================================METEORITO========================================================================
+
+
+
 
 
 }

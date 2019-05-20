@@ -156,6 +156,7 @@
     <ClInclude Include="Bala.h" />
     <ClInclude Include="Carro.h" />
     <ClInclude Include="Casa.h" />
+    <ClInclude Include="Edificio.h" />
     <ClInclude Include="Foco.h" />
     <ClInclude Include="Meta.h" />
     <ClInclude Include="Meteorito.h" />
@@ -172,6 +173,7 @@
     <ClCompile Include="Bala.cpp" />
     <ClCompile Include="Carro.cpp" />
     <ClCompile Include="Casa.cpp" />
+    <ClCompile Include="Edificio.cpp" />
     <ClCompile Include="Foco.cpp" />
     <ClCompile Include="Meta.cpp" />
     <ClCompile Include="Meteorito.cpp" />

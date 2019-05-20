@@ -18,6 +18,10 @@ void Bala::avanzar() {
 
 Bala::Bala() {
 
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
+
 
 	// x, y, z, opacidad
 
@@ -26,37 +30,7 @@ Bala::Bala() {
 	//arriba der
 	//abajo der
 
-	//hit box
-	//izquierda
-	vertices.push_back({ vec4(-0.7f, 0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-	vertices.push_back({ vec4(0.9f, 0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
-	vertices.push_back({ vec4(0.9f, -0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
-	vertices.push_back({ vec4(-0.7f, -0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-	//derecha
-	vertices.push_back({ vec4(-0.7f, 0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-	vertices.push_back({ vec4(0.9f, 0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
-	vertices.push_back({ vec4(0.9f, -0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
-	vertices.push_back({ vec4(-0.7f, -0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-	//arriba
-	vertices.push_back({ vec4(-0.7f, 0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-	vertices.push_back({ vec4(0.9f, 0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
-	vertices.push_back({ vec4(-0.7f, 0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-	vertices.push_back({ vec4(0.9f, 0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
-	//abajo
-	vertices.push_back({ vec4(-0.7f, -0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-	vertices.push_back({ vec4(0.9f, -0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
-	vertices.push_back({ vec4(0.9f, -0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
-	vertices.push_back({ vec4(-0.7f, -0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-	//atrtas
-	vertices.push_back({ vec4(-0.7f, -0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-	vertices.push_back({ vec4(-0.7f, 0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-	vertices.push_back({ vec4(-0.7f, 0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-	vertices.push_back({ vec4(-0.7f, -0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-	//enfrente 
-	vertices.push_back({ vec4(0.9f, 0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
-	vertices.push_back({ vec4(0.9f, 0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
-	vertices.push_back({ vec4(0.9f, -0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
-	vertices.push_back({ vec4(0.9f, -0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
+	
 
 
 
@@ -100,7 +74,37 @@ Bala::Bala() {
 	vertices.push_back({ vec4(0.9f, 0.05f, 0.1f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 1.0f) });
 
 
-	
+	//hit box
+	//izquierda
+	vertices.push_back({ vec4(-0.7f, 0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 0.0f) });
+	vertices.push_back({ vec4(-0.7f, -0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 0.0f) });
+	//derecha
+	vertices.push_back({ vec4(-0.7f, 0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 0.0f) });
+	vertices.push_back({ vec4(-0.7f, -0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 0.0f) });
+	//arriba
+	vertices.push_back({ vec4(-0.7f, 0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 0.0f) });
+	vertices.push_back({ vec4(-0.7f, 0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 0.0f) });
+	//abajo
+	vertices.push_back({ vec4(-0.7f, -0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 0.0f) });
+	vertices.push_back({ vec4(-0.7f, -0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 0.0f) });
+	//atrtas
+	vertices.push_back({ vec4(-0.7f, -0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 0.0f) });
+	vertices.push_back({ vec4(-0.7f, 0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 0.0f) });
+	vertices.push_back({ vec4(-0.7f, 0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 0.0f) });
+	vertices.push_back({ vec4(-0.7f, -0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 0.0f) });
+	//enfrente 
+	vertices.push_back({ vec4(0.9f, 0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.2f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.2f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 1.0f, 0.0f) });
 
 
 
