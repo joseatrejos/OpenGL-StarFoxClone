@@ -7,15 +7,8 @@
 class Casa : public Modelo {
 
 public:
-
 	Casa();
-
-	void avanzar();
-	
 private:
-
 	void actualizarMatrizModelo();
-
-	vec3 coordenadas = vec3(0.0f, 0.0f, 0.0f);
-
+	vec3 coordenadas = vec3(0.0f, -2.0f, 2.0f);
 };

@@ -9,6 +9,9 @@ public:
 	NaveStarFox();
 	void avanzar();
 	void rotar();
+	void moverIzquierda();
+	void moverDerecha();
+	void retroceder();
 	vec3  getCoordenadas();
 
 private:

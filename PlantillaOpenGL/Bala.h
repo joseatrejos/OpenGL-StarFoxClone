@@ -7,15 +7,10 @@
 class Bala : public Modelo {
 
 public:
-
 	Bala();
-
 	void avanzar();
 
 private:
-
 	void actualizarMatrizModelo();
-
 	vec3 coordenadas = vec3(0.0f, 0.0f, 0.0f);
-
 };

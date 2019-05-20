@@ -13,15 +13,34 @@ vec3 NaveStarFox::getCoordenadas() {
 }
 
 void NaveStarFox::avanzar() {
-
-	coordenadas.z += 0.01 ;
+	coordenadas.z += 0.1 ;
 	actualizarMatrizModelo();
 }
 
 void NaveStarFox::rotar() {
-
+	modelo = rotate(modelo, -1.5708f, vec3(1.0f, 0.0f, 0.0f));
 }
 
+void NaveStarFox::moverIzquierda() {
+	if (coordenadas.x <= 10.0f)
+	{
+		coordenadas.x += 0.1;
+		actualizarMatrizModelo();
+	}
+}
+
+void NaveStarFox::moverDerecha() {
+	if (coordenadas.x >= -10.0f)
+	{
+		coordenadas.x -= 0.1;
+		actualizarMatrizModelo();
+	}
+}
+
+void NaveStarFox::retroceder() {
+		coordenadas.z -= 0.15;
+		actualizarMatrizModelo();
+}
 
 NaveStarFox::NaveStarFox() {
 
@@ -488,5 +507,5 @@ NaveStarFox::NaveStarFox() {
 	vertices.push_back({ vec4(-0.7f, -0.05f, 1.2f, 1.0f), vec4(0.0f, 0.2f, 0.8f, 1.0f) });
 
 	
-
+	actualizarMatrizModelo();
 }
