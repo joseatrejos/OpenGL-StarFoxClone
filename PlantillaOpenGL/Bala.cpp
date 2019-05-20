@@ -5,13 +5,17 @@
 
 void Bala::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
-	modelo = rotate(modelo, -1.5708f, vec3(0.0f, 1.0f, 0.0f));
+
 	modelo = translate(modelo, coordenadas);
+	modelo = rotate(modelo, -1.5708f, vec3(0.0f, 1.0f, 0.0f));
 	//modelo = scale();
 }
 
 void Bala::aparecer(vec3 coordenadasNaveStarFox) {
-	modelo = translate(modelo, coordenadasNaveStarFox);
+	//modelo = translate(modelo, coordenadasNaveStarFox);
+	coordenadas = coordenadasNaveStarFox;
+	actualizarMatrizModelo();
+
 }
 
 void Bala::tiempovida() {

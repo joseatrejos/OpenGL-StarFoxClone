@@ -1,7 +1,7 @@
 #include "stdafx.h"
 #include "Edificio.h"
 #include "glm/gtx/transform.hpp"
-//#include "glm/gtc/matrix_transform.hpp"
+#include "glm/gtc/matrix_transform.hpp"
 
 #include "glm/glm.hpp"
 
@@ -9,7 +9,7 @@
 void Edificio::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
-	//modelo = scale(modelo, vec3(20.0f, 20.0f, 20.0f));
+	modelo = scale(modelo, vec3(8.0f, 2.0f, 8.0f));
 }
 
 Edificio::Edificio() {
