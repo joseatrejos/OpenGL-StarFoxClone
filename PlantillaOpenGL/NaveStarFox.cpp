@@ -11,9 +11,18 @@ void NaveStarFox::actualizarMatrizModelo() {
 vec3 NaveStarFox::getCoordenadas() {
 	return coordenadas;
 }
+/*
+vec3 NaveStarFox::getCoordenadasxyz(vec3 xyz) {
+	return xyz;
+}*/
 
 void NaveStarFox::avanzar() {
-	coordenadas.z += 0.1 ;
+	coordenadas.z += 0.1;
+	actualizarMatrizModelo();
+}
+
+void NaveStarFox::rapidez() {
+	coordenadas.z += 0.8;
 	actualizarMatrizModelo();
 }
 
@@ -26,6 +35,8 @@ void NaveStarFox::moverIzquierda() {
 	{
 		coordenadas.x += 0.1;
 		actualizarMatrizModelo();
+		modelo = rotate(modelo, -.57f, vec3(1.0f, 0.0f, 0.0f));
+		modelo = rotate(modelo, .57f, vec3(0.0f, 1.0f, 0.0f));
 	}
 }
 
@@ -34,6 +45,8 @@ void NaveStarFox::moverDerecha() {
 	{
 		coordenadas.x -= 0.1;
 		actualizarMatrizModelo();
+		modelo = rotate(modelo, .57f, vec3(1.0f, 0.0f, 0.0f));
+		modelo = rotate(modelo, -.57f, vec3(0.0f, 1.0f, 0.0f));
 	}
 }
 

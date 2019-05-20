@@ -11,10 +11,12 @@ public:
 	void rotar();
 	void moverIzquierda();
 	void moverDerecha();
+	void rapidez();
 	void retroceder();
 	vec3  getCoordenadas();
+	vec3 getCoordenadasxyz();
 
 private:
 	void actualizarMatrizModelo();
-	vec3 coordenadas = vec3(0.0f, 0.0f, 0.0f);
+	vec3 coordenadas = vec3(0.0f, 0.0f, -70.0f);
 };

@@ -73,7 +73,7 @@ Foco::Foco() {
 	vertices.push_back({ vec4(0.2f, -0.9f, -1.7f, 1.0f),vec4(0.1f ,0.1f, 0.1f,1.0f) });
 	vertices.push_back({ vec4(0.2f, -0.9f, -1.0f, 1.0f),vec4(0.1f ,0.1f, 0.1f,1.0f) });
 
-	//Palito UFF
+	//Palito
 
 	vertices.push_back({ vec4(-0.5f, -0.9f, -0.9f, 1.0f),vec4(0.1f ,0.1f, 0.4f,1.0f) });
 	vertices.push_back({ vec4(0.5f, -0.9f, -0.9f, 1.0f),vec4(0.1f ,0.1f, 0.4f,1.0f) });

@@ -4,19 +4,14 @@
 #include "glm/gtx/transform.hpp"
 #include "glm/glm.hpp"
 
-class Misil : public Modelo {
+class Edificio : public Modelo {
 
 public:
 
-	Misil();
-
-	void avanzar();
+	Edificio();
+	vec3 coordenadas = vec3(0.0f, -2.0f, 2.0f);
 	void actualizarMatrizModelo();
-
-	vec3 coordenadas = vec3(0.0f, 0.0f, 0.0f);
 
 private:
 
-	
-
-};
+}; 

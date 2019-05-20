@@ -11,11 +11,11 @@ public:
 	Foco();
 
 	void avanzar();
-	
-private:
 
 	void actualizarMatrizModelo();
 
-	vec3 coordenadas = vec3(0.0f, 0.0f, 0.0f);
+	vec3 coordenadas = vec3(0.0f, 0.4f, 2.0f);
+private:
+
 
 };

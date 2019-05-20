@@ -163,6 +163,7 @@
     <ClInclude Include="Modelo.h" />
     <ClInclude Include="NaveEnemiga.h" />
     <ClInclude Include="NaveStarFox.h" />
+    <ClInclude Include="Edificio.h" />
     <ClInclude Include="Shader.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
@@ -180,6 +181,7 @@
     <ClCompile Include="NaveEnemiga.cpp" />
     <ClCompile Include="NaveStarFox.cpp" />
     <ClCompile Include="PlantillaOpenGL.cpp" />
+    <ClCompile Include="Edificio.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

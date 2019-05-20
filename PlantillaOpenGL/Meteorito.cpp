@@ -18,6 +18,9 @@ void Meteorito::avanzar() {
 
 Meteorito::Meteorito() {
 
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+
 	//===========================================================METEORITO========================================================================
 	
 	//PARTE ALTA ARRIBA
@@ -342,6 +345,48 @@ Meteorito::Meteorito() {
 	//PARTE ALTA Abajo
 	
 	//===========================================================METEORITO========================================================================
+	//HITBOX
+	//enfrente
+	vertices.push_back({ vec4(-0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, -0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+	//atras
+	vertices.push_back({ vec4(-0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, -0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+	//lateral der
+	vertices.push_back({ vec4(0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+	//lateral izq
+	vertices.push_back({ vec4(-0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, -0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, -0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+	//abajo
+	vertices.push_back({ vec4(0.9f, -0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, -0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, -0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+	//arriba
+	vertices.push_back({ vec4(0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+	vertices.push_back({ vec4(-0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+
+
+	actualizarMatrizModelo();
+
+
 
 
 }

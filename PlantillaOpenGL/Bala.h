@@ -8,10 +8,12 @@ class Bala : public Modelo {
 
 public:
 	Bala();
-	void aparecer();
+	void aparecer(vec3 coordenadasNaveStarFox);
 	void avanzar();
-
-private:
+	void tiempovida();
 	void actualizarMatrizModelo();
 	vec3 coordenadas = vec3(0.0f, 0.0f, 0.0f);
+
+private:
+
 };
