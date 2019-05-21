@@ -6,40 +6,31 @@ void Bala::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
 	modelo = rotate(modelo, -1.5708f, vec3(0.0f, 1.0f, 0.0f));
-	//modelo = scale();
 }
 
 void Bala::aparecer(vec3 coordenadasNaveStarFox) {
-	//modelo = translate(modelo, coordenadasNaveStarFox);
-	coordenadas = coordenadasNaveStarFox;
+	balaDisparada = true;
+	coordenadas = coordenadasNaveStarFox + vec3(0.17f, -0.05f, 1.4f);
 	actualizarMatrizModelo();
-
 }
 
-void Bala::tiempovida() {
-	double tiempo = glfwGetTime();
-	if (tiempo <= 5)
+void Bala::avanzar(double tiempoDiferencial) {
+	coordenadas.z += 75.0f * tiempoDiferencial;
+	actualizarMatrizModelo();
+
+	distanciaRecorrida += 75.0f * tiempoDiferencial;
+	// Al exceder la distancia máxima, la desaparecemos y reiniciamos la distancia
+	if (distanciaRecorrida >= 40)
 	{
-		tiempo = glfwGetTime();
+		distanciaRecorrida = 0;
+		balaDisparada = false;
+		renderearBalas = true;
 	}
-}
-
-void Bala::avanzar() {
-	coordenadas.z += 0.04f;
-	actualizarMatrizModelo();
 }
 
 Bala::Bala() {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
-	// x, y, z, opacidad
-
-	//abajo izq
-	//arriba izq
-	//arriba der
-	//abajo der
-
 
 	//=============================== B A L A ============================================
 

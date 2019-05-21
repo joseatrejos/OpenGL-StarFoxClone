@@ -1,10 +1,14 @@
 #include "stdafx.h"
 #include "NaveEnemiga.h"
+#include "glm/gtx/transform.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+#include "glm/glm.hpp"
 
 void NaveEnemiga::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
 	modelo = rotate(modelo, 1.5708f, vec3(0.0f, 1.0f, 0.0f));
+	modelo = scale(modelo, vec3(1.15f, 1.15f, 1.15f));
 }
 
 void NaveEnemiga::avanzar() {

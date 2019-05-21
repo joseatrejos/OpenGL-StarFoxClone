@@ -1,25 +1,23 @@
 #include "stdafx.h"
 #include "Misil.h"
-
+#include "glm/gtx/transform.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+#include "glm/glm.hpp"
 
 void Misil::actualizarMatrizModelo() {
-
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
-
+	modelo = scale(modelo, vec3(1.0f, 1.0f, 1.0f));
 }
 
 void Misil::avanzar() {
-
 	coordenadas.z += 0.01f;
 	actualizarMatrizModelo();
-
 }
 
 Misil::Misil() {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
 
 	//=============================== M I S I L ==========================================
 	//Union cuadro fondo
@@ -51,9 +49,6 @@ Misil::Misil() {
 	vertices.push_back({ vec4(0.0f, 0.2f, 0.0f, 1.0f), vec4(0.5f, 0.1f, 0.0f, 1.0f) });
 	vertices.push_back({ vec4(0.2f, 0.2f, 0.0f, 1.0f), vec4(0.5f, 0.1f, 0.0f, 1.0f) });
 	vertices.push_back({ vec4(0.2f, 0.2f, 0.4f, 1.0f), vec4(0.5f, 0.1f, 0.0f, 1.0f) });
-
-
-
 
 	//Rectangulo grande Fondo
 	vertices.push_back({ vec4(-0.9f, -0.3f, 0.0f, 1.0f), vec4(1.0f, 1.0f, 1.0f, 1.0f) });
@@ -91,10 +86,7 @@ Misil::Misil() {
 	vertices.push_back({ vec4(0.0f, 0.3f, 0.0f, 1.0f), vec4(1.0f, 1.0f, 1.0f, 1.0f) });
 	vertices.push_back({ vec4(0.0f, 0.3f, 0.4f, 1.0f), vec4(1.0f, 1.0f, 1.0f, 1.0f) });
 
-
-
-	//HT BOX
-
+	//HIT BOX
 	//Rectangulo Cola Fondo
 	vertices.push_back({ vec4(-1.0f, -0.4f, 0.0f, 1.0f), vec4(0.5f, 0.0f, 0.0f, 1.0f) });
 	vertices.push_back({ vec4(-1.0f, 0.4f, 0.0f, 1.0f), vec4(0.5f, 0.0f, 0.0f, 1.0f) });
@@ -130,8 +122,6 @@ Misil::Misil() {
 	vertices.push_back({ vec4(-1.0f, -0.4f, 0.0f, 1.0f), vec4(0.5f, 0.0f, 0.0f, 1.0f) });
 	vertices.push_back({ vec4(-0.9f, -0.4f, 0.0f, 1.0f), vec4(0.5f, 0.0f, 0.0f, 1.0f) });
 	vertices.push_back({ vec4(-0.9f, -0.4f, 0.4f, 1.0f), vec4(0.5f, 0.0f, 0.0f, 1.0f) });
-
-
 
 	//Parte delantera cuadro de fondo
 	vertices.push_back({ vec4(0.2f, -0.3f, 0.0f, 1.0f), vec4(0.5f, 0.0f, 0.0f, 1.0f) });
@@ -169,7 +159,6 @@ Misil::Misil() {
 	vertices.push_back({ vec4(1.0f, 0.05f, 0.3f, 1.0f), vec4(0.5f, 0.0f, 0.0f, 1.0f) });
 	vertices.push_back({ vec4(1.0f, 0.05f, 0.1f, 1.0f), vec4(0.5f, 0.0f, 0.0f, 1.0f) });
 
-
 	//izquierda
 	vertices.push_back({ vec4(-1.0f, 0.4f, 0.0f, 1.0f), vec4(0.0f, 0.2f, 0.0f, 0.0f) });
 	vertices.push_back({ vec4(1.0f, 0.4f, 0.0f, 1.0f), vec4(0.0f, 0.2f, 0.0f, 0.0f) });
@@ -200,8 +189,6 @@ Misil::Misil() {
 	vertices.push_back({ vec4(1.0f, 0.4f, 0.4f, 1.0f), vec4(0.0f, 0.2f, 0.0f, 0.0f) });
 	vertices.push_back({ vec4(1.0f, -0.4f, 0.4f, 1.0f), vec4(0.0f, 0.2f, 0.0f, 0.0f) });
 	vertices.push_back({ vec4(1.0f, -0.4f, 0.0f, 1.0f), vec4(0.0f, 0.2f, 0.0f, 0.0f) });
-
-
 
 	actualizarMatrizModelo();
 }

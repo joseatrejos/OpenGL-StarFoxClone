@@ -1,34 +1,23 @@
 #include "stdafx.h"
 #include "Meta.h"
-
+#include "glm/gtx/transform.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+#include "glm/glm.hpp"
 
 void Meta::actualizarMatrizModelo() {
-
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
-
+	modelo = scale(modelo, vec3(2.5f, 2.45f, 15.0f));
 }
 
 void Meta::avanzar() {
-
 	coordenadas.z += 0.01f;
 	actualizarMatrizModelo();
-
 }
 
 Meta::Meta() {
-
-	// x, y, z, opacidad
-
-	//abajo izq
-	//arriba izq
-	//arriba der
-	//abajo der
-
-
 	//=============================== M E T A =============================================
 	
-
 	//PILAR IZQUIERDO
 	//Pilar izquierdo rectangulo centro abajo
 	vertices.push_back({ vec4(-0.45f, 0.0f, 0.0f, 1.0f), vec4(1.0f, 1.0f, 1.0f, 1.0f) });
@@ -42,21 +31,17 @@ Meta::Meta() {
 	vertices.push_back({ vec4(-0.25f, 0.4f, 0.4f, 1.0f), vec4(1.0f, 1.0f, 1.0f, 1.0f) });
 	vertices.push_back({ vec4(-0.25f, 0.0f, 0.4f, 1.0f), vec4(1.0f, 1.0f, 1.0f, 1.0f) });
 
-
 	//Pilar izquierdo rectangulo izq
 	vertices.push_back({ vec4(-0.45f, 0.5f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(-0.45f, 0.5f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(-0.45f, 0.0f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(-0.45f, 0.0f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 
-
 	//Pilar izquierdo rectangulo der
 	vertices.push_back({ vec4(-0.25f, 0.4f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(-0.25f, 0.4f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(-0.25f, 0.0f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(-0.25f, 0.0f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-
-
 
 
 	//PILAR DERECHO
@@ -72,20 +57,17 @@ Meta::Meta() {
 	vertices.push_back({ vec4(0.25f, 0.4f, 0.4f, 1.0f), vec4(1.0f, 1.0f, 1.0f, 1.0f) });
 	vertices.push_back({ vec4(0.25f, 0.0f, 0.4f, 1.0f), vec4(1.0f, 1.0f, 1.0f, 1.0f) });
 
-
 	//Pilar derecho rectangulo izq ()
 	vertices.push_back({ vec4(0.45f, 0.5f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(0.45f, 0.5f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(0.45f, 0.0f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(0.45f, 0.0f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 
-
 	//Pilar derecho rectangulo der ()
 	vertices.push_back({ vec4(0.25f, 0.4f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(0.25f, 0.4f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(0.25f, 0.0f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(0.25f, 0.0f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-
 
 
 	//CUADRITO ESQUINA IZQUIERDA
@@ -114,7 +96,6 @@ Meta::Meta() {
 	vertices.push_back({ vec4(-0.25f, 0.4f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 
 
-
 	//CUADRITO ESQUINA DERECHA
 	//Cuadro esquina derecha centro fondo
 	vertices.push_back({ vec4(0.45f, 0.5f, 0.0f, 1.0f), vec4(1.0f, 1.0f, 1.0f, 1.0f) });
@@ -139,7 +120,6 @@ Meta::Meta() {
 	vertices.push_back({ vec4(0.15f, 0.5f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(0.25f, 0.4f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(0.25f, 0.4f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
-
 
 
 	//RECTANGULO ARRIBA
@@ -167,7 +147,5 @@ Meta::Meta() {
 	vertices.push_back({ vec4(0.35f, 0.6f, 0.0f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 	vertices.push_back({ vec4(0.35f, 0.6f, 0.4f, 1.0f), vec4(0.0f, 0.0f, 0.5f, 1.0f) });
 
-	
-
-
+	actualizarMatrizModelo();
 }

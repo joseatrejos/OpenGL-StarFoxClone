@@ -35,15 +35,14 @@ void Modelo::inicializarVertexArray(GLuint posicionID, GLuint colorID, GLuint mo
 void Modelo::dibujar(GLenum modoDibujo) {
 	shader->enlazar();
 
-	glBindVertexArray(vertexArrayID);
+		glBindVertexArray(vertexArrayID);
 
-	glUniformMatrix4fv(modeloID, 1, GL_FALSE, &modelo[0][0]);
-	glUniformMatrix4fv(vistaID, 1, GL_FALSE, &vista[0][0]);
-	glUniformMatrix4fv(proyeccionID, 1, GL_FALSE, &proyeccion[0][0]);
+			glUniformMatrix4fv(modeloID, 1, GL_FALSE, &modelo[0][0]);
+			glUniformMatrix4fv(vistaID, 1, GL_FALSE, &vista[0][0]);
+			glUniformMatrix4fv(proyeccionID, 1, GL_FALSE, &proyeccion[0][0]);
 
-	glDrawArrays(modoDibujo, 0, vertices.size());
-	glBindVertexArray(0);
+			glDrawArrays(modoDibujo, 0, vertices.size());
+		glBindVertexArray(0);
 
 	shader->desenlazar();
-
 }

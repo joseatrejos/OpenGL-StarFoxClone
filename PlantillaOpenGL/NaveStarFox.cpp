@@ -1,27 +1,27 @@
 #include "stdafx.h"
 #include "NaveStarFox.h"
+#include "glm/gtx/transform.hpp"
+#include "glm/gtc/matrix_transform.hpp"
+#include "glm/glm.hpp"
 
 void NaveStarFox::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
 	modelo = rotate(modelo, -1.5708f, vec3(0.0f, 1.0f, 0.0f));
-	modelo = scale(modelo, vec3(1.0f, 0.15f, 1.0f));
+	modelo = scale(modelo, vec3(0.7f, 0.17f, 0.9f));
 }
 
 vec3 NaveStarFox::getCoordenadas() {
 	return coordenadas;
 }
 
-void NaveStarFox::avanzar(double tiempoDiferencial, bool avance) {
-	if (avance)
-	{
-		coordenadas.z += 5.0 * tiempoDiferencial;
-	}
+void NaveStarFox::avanzar(double tiempoDiferencial) {
+	coordenadas.z += 5.0 * tiempoDiferencial;
 	actualizarMatrizModelo();
 }
 
 void NaveStarFox::rapidez(double tiempoDiferencial) {
-	coordenadas.z += 10.0 * tiempoDiferencial;
+	coordenadas.z += 50.0 * tiempoDiferencial;
 	actualizarMatrizModelo();
 }
 
@@ -46,6 +46,24 @@ void NaveStarFox::moverDerecha(double tiempoDiferencial) {
 		actualizarMatrizModelo();
 		modelo = rotate(modelo, .57f, vec3(1.0f, 0.0f, 0.0f));
 		modelo = rotate(modelo, -.57f, vec3(0.0f, 1.0f, 0.0f));
+	}
+}
+
+void NaveStarFox::subir(double tiempoDiferencial) {
+	if (coordenadas.y <= 5.0f)
+	{
+		coordenadas.y += 4.0 * tiempoDiferencial;
+		actualizarMatrizModelo();
+		modelo = rotate(modelo, 0.385f, vec3(0.0f, 0.0f, 1.0f));
+	}
+}
+
+void NaveStarFox::bajar(double tiempoDiferencial) {
+	if (coordenadas.y >= -5.0f)
+	{
+		coordenadas.y -= 5.0 * tiempoDiferencial;
+		actualizarMatrizModelo();
+		modelo = rotate(modelo, 0.385f, vec3(0.0f, 0.0f, -1.0f));
 	}
 }
 

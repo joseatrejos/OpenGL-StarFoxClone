@@ -7,7 +7,7 @@
 void Edificio::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
-	modelo = scale(modelo, vec3(18.0f, 4.0f, 18.0f));
+	modelo = scale(modelo, vec3(17.4f, 6.0f, 18.0f));
 }
 
 Edificio::Edificio() {
