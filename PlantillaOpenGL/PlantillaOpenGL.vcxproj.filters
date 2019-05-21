@@ -30,9 +30,6 @@
     <ClInclude Include="Modelo.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
-    <ClInclude Include="Carro.h">
-      <Filter>Archivos de encabezado</Filter>
-    </ClInclude>
     <ClInclude Include="NaveStarFox.h">
       <Filter>Archivos de encabezado</Filter>
     </ClInclude>
@@ -74,9 +71,6 @@
     <ClCompile Include="Modelo.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
-    <ClCompile Include="Carro.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
     <ClCompile Include="NaveStarFox.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
@@ -99,9 +93,6 @@
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Foco.cpp">
-      <Filter>Archivos de origen</Filter>
-    </ClCompile>
-    <ClCompile Include="Tiempo.cpp">
       <Filter>Archivos de origen</Filter>
     </ClCompile>
     <ClCompile Include="Edificio.cpp">

@@ -1,16 +1,13 @@
 #include "stdafx.h"
 #include "NaveEnemiga.h"
 
-
 void NaveEnemiga::actualizarMatrizModelo() {
-
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
 	modelo = rotate(modelo, 1.5708f, vec3(0.0f, 1.0f, 0.0f));
 }
 
 void NaveEnemiga::avanzar() {
-
 	coordenadas.z += 0.01f;
 	actualizarMatrizModelo();
 }
@@ -18,9 +15,7 @@ void NaveEnemiga::avanzar() {
 NaveEnemiga::NaveEnemiga() {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-
-	
-	//===========================================================NAVE ENEMIGA========================================================================
+	//================================================NAVE ENEMIGA=============================================================
 
 	//Capsula
 	vertices.push_back({ vec4(-0.6f, 0.5f, -0.5f, 1.0f),vec4(0.0f ,0.2f, 0.4f,1.0f) });

@@ -2,10 +2,8 @@
 #include "Bala.h"
 #include "NaveStarFox.h"
 
-
 void Bala::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
-
 	modelo = translate(modelo, coordenadas);
 	modelo = rotate(modelo, -1.5708f, vec3(0.0f, 1.0f, 0.0f));
 	//modelo = scale();

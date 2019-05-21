@@ -5,16 +5,14 @@
 #include "glm/glm.hpp"
 class NaveStarFox : public Modelo {
 public:
-
 	NaveStarFox();
-	void avanzar();
+	void avanzar(double tiempoDiferencial, bool avance);
 	void rotar();
-	void moverIzquierda();
-	void moverDerecha();
-	void rapidez();
-	void retroceder();
-	vec3  getCoordenadas();
-	vec3 getCoordenadasxyz();
+	void moverIzquierda(double tiempoDiferencial);
+	void moverDerecha(double tiempoDiferencial);
+	void rapidez(double tiempoDiferencial);
+	void retroceder(double tiempoDiferencial);
+	vec3 getCoordenadas();
 
 private:
 	void actualizarMatrizModelo();

@@ -154,7 +154,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Bala.h" />
-    <ClInclude Include="Carro.h" />
     <ClInclude Include="Casa.h" />
     <ClInclude Include="Foco.h" />
     <ClInclude Include="Meta.h" />
@@ -171,7 +170,6 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Bala.cpp" />
-    <ClCompile Include="Carro.cpp" />
     <ClCompile Include="Casa.cpp" />
     <ClCompile Include="Foco.cpp" />
     <ClCompile Include="Meta.cpp" />
@@ -189,7 +187,6 @@
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Create</PrecompiledHeader>
     </ClCompile>
-    <ClCompile Include="Tiempo.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="FragmentShader.shader" />
