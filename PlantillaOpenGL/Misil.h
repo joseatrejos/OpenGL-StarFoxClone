@@ -7,16 +7,11 @@
 class Misil : public Modelo {
 
 public:
-
 	Misil();
-
 	void avanzar();
 	void actualizarMatrizModelo();
-
 	vec3 coordenadas = vec3(0.0f, 0.0f, 0.0f);
 
 private:
-
-	
 
 };

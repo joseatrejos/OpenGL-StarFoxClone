@@ -10,6 +10,10 @@ void Meteorito::actualizarMatrizModelo() {
 	modelo = scale(modelo, vec3(2.0f, 1.5, 2.0f));
 }
 
+vec3 Meteorito::getCoordenadas() {
+	return coordenadas;
+}
+
 void Meteorito::avanzar() {
 	coordenadas.z += 0.01f;
 	actualizarMatrizModelo();

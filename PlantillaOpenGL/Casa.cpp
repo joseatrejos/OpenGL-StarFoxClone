@@ -8,6 +8,10 @@ void Casa::actualizarMatrizModelo() {
 	modelo = scale(modelo, vec3(3.0f, 3.0f, 2.0f));
 }
 
+vec3 Casa::getCoordenadas() {
+	return coordenadas;
+}
+
 Casa::Casa() {
 	//=============================== C A S A ========================================== //
 	//Techo

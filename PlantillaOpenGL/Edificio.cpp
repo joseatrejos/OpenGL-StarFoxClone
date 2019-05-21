@@ -10,6 +10,10 @@ void Edificio::actualizarMatrizModelo() {
 	modelo = scale(modelo, vec3(17.4f, 6.0f, 18.0f));
 }
 
+vec3 Edificio::getCoordenadas() {
+	return coordenadas;
+}
+
 Edificio::Edificio() {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

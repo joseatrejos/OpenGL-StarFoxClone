@@ -11,6 +11,10 @@ void NaveEnemiga::actualizarMatrizModelo() {
 	modelo = scale(modelo, vec3(1.15f, 1.15f, 1.15f));
 }
 
+vec3 NaveEnemiga::getCoordenadas() {
+	return coordenadas;
+}
+
 void NaveEnemiga::avanzar() {
 	coordenadas.z += 0.01f;
 	actualizarMatrizModelo();

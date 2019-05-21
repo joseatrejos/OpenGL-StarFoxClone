@@ -10,6 +10,10 @@ void Meta::actualizarMatrizModelo() {
 	modelo = scale(modelo, vec3(2.5f, 2.45f, 15.0f));
 }
 
+vec3 Meta::getCoordenadas() {
+	return coordenadas;
+}
+
 void Meta::avanzar() {
 	coordenadas.z += 0.01f;
 	actualizarMatrizModelo();

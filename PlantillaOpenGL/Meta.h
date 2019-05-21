@@ -7,16 +7,12 @@
 class Meta : public Modelo {
 
 public:
-
 	Meta();
-
 	void avanzar();
-
 	void actualizarMatrizModelo();
-
 	vec3 coordenadas = vec3(0.0f, 2.5f, 2.0f);
+	vec3 getCoordenadas();
 
 private:
-
 
 };

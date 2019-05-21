@@ -59,7 +59,7 @@ void NaveStarFox::subir(double tiempoDiferencial) {
 }
 
 void NaveStarFox::bajar(double tiempoDiferencial) {
-	if (coordenadas.y >= -5.0f)
+	if (coordenadas.y >= -2.5f)
 	{
 		coordenadas.y -= 5.0 * tiempoDiferencial;
 		actualizarMatrizModelo();
