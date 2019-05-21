@@ -15,7 +15,7 @@ vec3 NaveStarFox::getCoordenadas() {
 vec3 NaveStarFox::getCoordenadasxyz(vec3 xyz) {
 	return xyz;
 }*/
-
+//hola, no me dejaba subirlo asi que dejo esto por aqui 
 void NaveStarFox::avanzar() {
 	coordenadas.z += 0.1;
 	actualizarMatrizModelo();
