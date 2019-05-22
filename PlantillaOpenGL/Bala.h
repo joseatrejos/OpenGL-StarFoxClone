@@ -14,7 +14,8 @@ public:
 	vec3 coordenadas = vec3(0.0f, 0.0f, 0.0f);
 	double distanciaRecorrida = 0.0f;
 	bool balaDisparada = false;
-	bool renderearBalas = true;
+	bool balaColisionada = false;
+	bool renderearBala = true;
 
 private:
 

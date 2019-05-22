@@ -15,8 +15,10 @@ public:
 	void rapidez(double tiempoDiferencial);
 	void retroceder(double tiempoDiferencial);
 	vec3 getCoordenadas();
+	vec3 coordenadas = vec3(0.0f, 3.0f, -70.0f);
+	int vida = 2;
+	bool rotando = false;
 
 private:
 	void actualizarMatrizModelo();
-	vec3 coordenadas = vec3(0.0f, 0.0f, -150.0f);
 };

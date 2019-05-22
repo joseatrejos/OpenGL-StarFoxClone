@@ -12,6 +12,7 @@ void Bala::actualizarMatrizModelo() {
 
 void Bala::aparecer(vec3 coordenadasNaveStarFox) {
 	balaDisparada = true;
+	distanciaRecorrida = 0;
 	coordenadas = coordenadasNaveStarFox + vec3(0.17f, -0.05f, 1.4f);
 	actualizarMatrizModelo();
 }
@@ -26,7 +27,7 @@ void Bala::avanzar(double tiempoDiferencial) {
 	{
 		distanciaRecorrida = 0;
 		balaDisparada = false;
-		renderearBalas = true;
+		renderearBala = true;
 	}
 }
 

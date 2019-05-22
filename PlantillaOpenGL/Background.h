@@ -4,14 +4,13 @@
 #include "glm/gtx/transform.hpp"
 #include "glm/glm.hpp"
 
-class NaveEnemiga : public Modelo {
+class Background : public Modelo {
 
 public:
-	NaveEnemiga();
-	void avanzar();
+	Background();
 	void actualizarMatrizModelo();
-	vec3 coordenadas = vec3(0.0f, 0.0f, 0.0f);
-	bool vida = true;
+	vec3 coordenadas = vec3(0.0f, 2.5f, 2.0f);
+	vec3 getCoordenadas();
 
 private:
 

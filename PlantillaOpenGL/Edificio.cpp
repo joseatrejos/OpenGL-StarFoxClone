@@ -7,7 +7,7 @@
 void Edificio::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
-	modelo = scale(modelo, vec3(17.4f, 6.0f, 18.0f));
+	modelo = scale(modelo, vec3(14.0f, 6.0f, 14.0f));
 }
 
 vec3 Edificio::getCoordenadas() {
@@ -83,7 +83,6 @@ Edificio::Edificio() {
 	vertices.push_back({ vec4(-0.45f, 0.5f,  0.2f, 1.0f),vec4(0.0f ,0.6f, 0.9f,1.0f) });
 
 	//2do cuadrado
-
 	vertices.push_back({ vec4(-0.4f, 4.25f, 0.7f, 1.0f),vec4(0.0f ,0.5f, 0.7f,1.0f) });
 	vertices.push_back({ vec4(0.4f, 4.5f,  0.7f, 1.0f),vec4(0.0f ,0.4f, 0.6f,1.0f) });
 	vertices.push_back({ vec4(0.4f, 0.5f,  0.7f, 1.0f),vec4(0.0f ,0.4f, 0.6f,1.0f) });
@@ -93,7 +92,6 @@ Edificio::Edificio() {
 	vertices.push_back({ vec4(0.4f, 0.5f,  0.7f, 1.0f),vec4(0.0f ,0.4f, 0.6f,1.0f) });
 	vertices.push_back({ vec4(0.4f, 0.5f,  0.3f, 1.0f),vec4(0.0f ,0.4f, 0.6f,1.0f) });
 	vertices.push_back({ vec4(0.4f, 4.5f,  0.3f, 1.0f),vec4(0.0f ,0.4f, 0.6f,1.0f) });
-
 
 	vertices.push_back({ vec4(0.4f, 0.5f,  0.7f, 1.0f),vec4(0.0f ,0.4f, 0.6f,1.0f) });
 	vertices.push_back({ vec4(0.4f, 0.5f,  0.3f, 1.0f),vec4(0.0f ,0.4f, 0.6f,1.0f) });
@@ -115,7 +113,7 @@ Edificio::Edificio() {
 	vertices.push_back({ vec4(0.4f, 0.5f,  0.3f, 1.0f),vec4(0.0f ,0.4f, 0.6f,1.0f) });
 	vertices.push_back({ vec4(-0.4f, 0.5f,  0.3f, 1.0f),vec4(0.0f ,0.5f, 0.7f,1.0f) });
 
-	//hitbox
+	/*hitbox
 	//frente
 	vertices.push_back({ vec4(-0.5f, 4.5f, 1.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
 	vertices.push_back({ vec4(0.5f, 4.5f,  1.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
@@ -146,7 +144,7 @@ Edificio::Edificio() {
 	vertices.push_back({ vec4(0.5f, 4.5f,  .0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
 	vertices.push_back({ vec4(-0.5f, 4.5f, 1.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
 	vertices.push_back({ vec4(-0.5f, 4.5f, .0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
-	//hitbox
+	//hitbox*/
 	//=====================EDIFICIO=========================
 
 	actualizarMatrizModelo();

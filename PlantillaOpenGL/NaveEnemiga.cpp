@@ -8,11 +8,7 @@ void NaveEnemiga::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
 	modelo = rotate(modelo, 1.5708f, vec3(0.0f, 1.0f, 0.0f));
-	modelo = scale(modelo, vec3(1.15f, 1.15f, 1.15f));
-}
-
-vec3 NaveEnemiga::getCoordenadas() {
-	return coordenadas;
+	modelo = scale(modelo, vec3(1.0f, 1.0f, 1.0f));
 }
 
 void NaveEnemiga::avanzar() {
@@ -56,9 +52,6 @@ NaveEnemiga::NaveEnemiga() {
 	vertices.push_back({ vec4(0.4f, -0.1f, 0.1f, 1.0f),vec4(0.0f ,0.2f, 0.4f,1.0f) });
 	vertices.push_back({ vec4(-0.6f, -0.5f, 0.5f, 1.0f),vec4(0.0f ,0.2f, 0.4f,1.0f) });
 
-
-
-
 	//Ala 1
 	vertices.push_back({ vec4(-0.9f, 0.9f, -0.8f, 1.0f),vec4(0.2f ,0.0f, 0.0f,1.0f) });
 	vertices.push_back({ vec4(0.1f, 0.9f, -0.4f, 1.0f),vec4(0.2f ,0.0f, 0.0f,1.0f) });
@@ -89,7 +82,6 @@ NaveEnemiga::NaveEnemiga() {
 	vertices.push_back({ vec4(0.1f, 0.9f, -0.5f, 1.0f),vec4(0.2f ,0.0f, 0.0f,1.0f) });
 	vertices.push_back({ vec4(0.1f, 0.0f, -0.5f, 1.0f),vec4(0.2f ,0.0f, 0.0f,1.0f) });
 	vertices.push_back({ vec4(-0.9f, 0.8f, -0.9f, 1.0f),vec4(0.2f ,0.0f, 0.0f,1.0f) });
-
 
 	//Ala 2
 	vertices.push_back({ vec4(-0.9f, 0.9f, 0.8f, 1.0f),vec4(0.2f ,0.0f, 0.0f,1.0f) });
@@ -309,10 +301,7 @@ NaveEnemiga::NaveEnemiga() {
 	vertices.push_back({ vec4(0.0f, 0.4f, 0.45f, 1.0f),vec4(0.1f ,0.2f, 0.9f,1.0f) });
 	vertices.push_back({ vec4(-0.1f, 0.4f, 0.55f, 1.0f),vec4(0.1f ,0.2f, 0.9f,1.0f) });
 
-	//===========================================================NAVE ENEMIGA========================================================================
-
-	
-	//hit box
+	/*hit box
 	//parte izquierda
 	vertices.push_back({ vec4(-0.9f, 0.9f, -0.9f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,0.0f) });
 	vertices.push_back({ vec4(0.9f, 0.9f, -0.9f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,0.0f) });
@@ -342,7 +331,7 @@ NaveEnemiga::NaveEnemiga() {
 	vertices.push_back({ vec4(0.9f, 0.9f, -0.9f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,0.0f) });
 	vertices.push_back({ vec4(0.9f, 0.9f, 0.9f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,0.0f) });
 	vertices.push_back({ vec4(0.9f, -0.5f, 0.9f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,0.0f) });
-	vertices.push_back({ vec4(0.9f, -0.5f, -0.9f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,0.0f) });
+	vertices.push_back({ vec4(0.9f, -0.5f, -0.9f, 1.0f),vec4((float(rand() % 101)) / 100,(float(rand() % 101)) / 100,(float(rand() % 101)) / 100,0.0f) });*/
 	
 	actualizarMatrizModelo();
 }

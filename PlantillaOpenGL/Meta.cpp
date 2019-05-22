@@ -7,7 +7,7 @@
 void Meta::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
-	modelo = scale(modelo, vec3(2.5f, 2.45f, 15.0f));
+	modelo = scale(modelo, vec3(45.0f, 40.5f, 15.0f));
 }
 
 vec3 Meta::getCoordenadas() {

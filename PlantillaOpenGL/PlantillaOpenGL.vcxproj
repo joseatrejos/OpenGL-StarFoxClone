@@ -153,6 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Background.h" />
     <ClInclude Include="Bala.h" />
     <ClInclude Include="Casa.h" />
     <ClInclude Include="Foco.h" />
@@ -169,6 +170,7 @@
     <ClInclude Include="Vertice.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Background.cpp" />
     <ClCompile Include="Bala.cpp" />
     <ClCompile Include="Casa.cpp" />
     <ClCompile Include="Foco.cpp" />

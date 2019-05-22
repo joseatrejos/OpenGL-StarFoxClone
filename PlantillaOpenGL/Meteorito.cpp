@@ -7,7 +7,8 @@
 void Meteorito::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
-	modelo = scale(modelo, vec3(2.0f, 1.5, 2.0f));
+	modelo = rotate(modelo, 3.14159f, vec3(0.0f, 1.0f, 0.0f));
+	modelo = scale(modelo, vec3(3.0f, 2.5f, 3.0f));
 }
 
 vec3 Meteorito::getCoordenadas() {
@@ -316,6 +317,7 @@ Meteorito::Meteorito() {
 	vertices.push_back({ vec4(0.25f, -0.9f, .6f, 1.0f),vec4(0.4f ,0.3f, 0.0f,1.0f) });
 
 	// ====================================METEORITO====================================
+	/*
 	//HITBOX
 	//enfrente
 	vertices.push_back({ vec4(-0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
@@ -352,6 +354,8 @@ Meteorito::Meteorito() {
 	vertices.push_back({ vec4(0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
 	vertices.push_back({ vec4(-0.9f, 0.9f, 0.0f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
 	vertices.push_back({ vec4(-0.9f, 0.9f, 1.25f, 1.0f),vec4(0.0f ,0.0f, 0.0f,0.0f) });
+
+	*/
 
 	actualizarMatrizModelo();
 }

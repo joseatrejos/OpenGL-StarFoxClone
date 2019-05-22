@@ -7,7 +7,7 @@
 void Foco::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
-	modelo = scale(modelo, vec3(0.7f, 0.7f, 0.7f));
+	modelo = scale(modelo, vec3(0.4f, 0.4f, 0.4f));
 }
 
 void Foco::avanzar() {
