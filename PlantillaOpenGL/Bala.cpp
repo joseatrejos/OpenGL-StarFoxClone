@@ -18,7 +18,7 @@ void Bala::aparecer(vec3 coordenadasNaveStarFox) {
 }
 
 void Bala::avanzar(double tiempoDiferencial) {
-	coordenadas.z += 75.0 * tiempoDiferencial;
+	coordenadas.z += 75.0f * (float)tiempoDiferencial;
 	actualizarMatrizModelo();
 
 	distanciaRecorrida += 75.0 * tiempoDiferencial;

@@ -1,2 +1,2 @@
-D:/Repos/StarFoxFinal/PlantillaOpenGL/include/glm/out/build/x64-Debug/CMakeFiles/edit_cache.dir
-D:/Repos/StarFoxFinal/PlantillaOpenGL/include/glm/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/josea/source/repos/StarFoxClone/PlantillaOpenGL/include/glm/out/build/x64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/josea/source/repos/StarFoxClone/PlantillaOpenGL/include/glm/out/build/x64-Debug/CMakeFiles/rebuild_cache.dir

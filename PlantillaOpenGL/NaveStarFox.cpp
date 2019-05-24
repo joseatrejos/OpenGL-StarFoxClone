@@ -16,24 +16,43 @@ vec3 NaveStarFox::getCoordenadas() {
 }
 
 void NaveStarFox::avanzar(double tiempoDiferencial) {
-	coordenadas.z += 11.5f * tiempoDiferencial;
+	coordenadas.z += 11.5f * (float)tiempoDiferencial;
 	actualizarMatrizModelo();
 }
 
 void NaveStarFox::detenerse(double tiempoDiferencial){
-	coordenadas.z -= 11.5f * tiempoDiferencial;
+	coordenadas.z -= 11.5f * (float)tiempoDiferencial;
 	actualizarMatrizModelo();
 }
-void NaveStarFox::rapidez(double tiempoDiferencial) {
+
+void NaveStarFox::retroceder(double tiempoDiferencial) {
 	tiempoAcumulado += tiempoDiferencial;
-	if(tiempoAcumulado <= 0.6 && !descanso)
+	if (tiempoAcumulado <= 0.7 && !descanso)
 	{
-		coordenadas.z += 13.0f * tiempoDiferencial;
+		coordenadas.z -= 7.5f * (float)tiempoDiferencial;
 	}
-	else if(tiempoAcumulado > 0.6)
+	else
 	{
 		descanso = true;
-		if (tiempoAcumulado > 1.5)
+		if (tiempoAcumulado > 2.0)
+		{
+			descanso = false;
+			tiempoAcumulado = 0;
+		}
+	}
+	actualizarMatrizModelo(); 
+}
+
+void NaveStarFox::rapidez(double tiempoDiferencial) {
+	tiempoAcumulado += tiempoDiferencial;
+	if(tiempoAcumulado <= 0.7 && !descanso)
+	{
+		coordenadas.z += 13.0f * (float)tiempoDiferencial;
+	}
+	else
+	{
+		descanso = true;
+		if (tiempoAcumulado > 2.0)
 		{
 			descanso = false;
 			tiempoAcumulado = 0;
@@ -47,10 +66,15 @@ void NaveStarFox::rotar() {
 	rotando = true;
 }
 
+void NaveStarFox::rotar2() {
+	modelo = rotate(modelo, 1.5708f, vec3(1.0f, 0.0f, 0.0f));
+	rotando = true;
+}
+
 void NaveStarFox::moverIzquierda(double tiempoDiferencial) {
 	if (coordenadas.x <= 10.0f)
 	{
-		coordenadas.x += 4.0 * tiempoDiferencial;
+		coordenadas.x += 4.0f * (float)tiempoDiferencial;
 		actualizarMatrizModelo();
 		modelo = rotate(modelo, -.57f, vec3(1.0f, 0.0f, 0.0f));
 		modelo = rotate(modelo, .57f, vec3(0.0f, 1.0f, 0.0f));
@@ -60,7 +84,7 @@ void NaveStarFox::moverIzquierda(double tiempoDiferencial) {
 void NaveStarFox::moverDerecha(double tiempoDiferencial) {
 	if (coordenadas.x >= -10.0f)
 	{
-		coordenadas.x -= 4.0 * tiempoDiferencial;
+		coordenadas.x -= 4.0f * (float)tiempoDiferencial;
 		actualizarMatrizModelo();
 		modelo = rotate(modelo, .57f, vec3(1.0f, 0.0f, 0.0f));
 		modelo = rotate(modelo, -.57f, vec3(0.0f, 1.0f, 0.0f));
@@ -70,7 +94,7 @@ void NaveStarFox::moverDerecha(double tiempoDiferencial) {
 void NaveStarFox::subir(double tiempoDiferencial) {
 	if (coordenadas.y <= 5.0f)
 	{
-		coordenadas.y += 4.0 * tiempoDiferencial;
+		coordenadas.y += 4.0f * (float)tiempoDiferencial;
 		actualizarMatrizModelo();
 		modelo = rotate(modelo, 0.385f, vec3(0.0f, 0.0f, 1.0f));
 	}
@@ -79,15 +103,10 @@ void NaveStarFox::subir(double tiempoDiferencial) {
 void NaveStarFox::bajar(double tiempoDiferencial) {
 	if (coordenadas.y >= -2.5f)
 	{
-		coordenadas.y -= 5.0 * tiempoDiferencial;
+		coordenadas.y -= 5.0f * (float)tiempoDiferencial;
 		actualizarMatrizModelo();
 		modelo = rotate(modelo, 0.385f, vec3(0.0f, 0.0f, -1.0f));
 	}
-}
-
-void NaveStarFox::retroceder(double tiempoDiferencial) {
-	coordenadas.z -= 10.0 * tiempoDiferencial;
-	actualizarMatrizModelo();
 }
 
 NaveStarFox::NaveStarFox() {

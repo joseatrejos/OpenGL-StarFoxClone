@@ -27,8 +27,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/Repos/StarFoxFinal/PlantillaOpenGL/include/glm/out/build/x64-Debug",
-		"source" : "D:/Repos/StarFoxFinal/PlantillaOpenGL/include/glm"
+		"build" : "C:/Users/josea/source/repos/StarFoxClone/PlantillaOpenGL/include/glm/out/build/x64-Debug",
+		"source" : "C:/Users/josea/source/repos/StarFoxClone/PlantillaOpenGL/include/glm"
 	},
 	"version" : 
 	{

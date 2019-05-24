@@ -16,6 +16,11 @@ void NaveEnemiga::avanzar() {
 	actualizarMatrizModelo();
 }
 
+vec3 NaveEnemiga::getCoordenadas()
+{
+	return coordenadas;
+}
+
 NaveEnemiga::NaveEnemiga() {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);

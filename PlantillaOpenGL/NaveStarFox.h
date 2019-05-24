@@ -8,6 +8,7 @@ public:
 	NaveStarFox();
 	void avanzar(double tiempoDiferencial);
 	void rotar();
+	void rotar2();
 	void moverIzquierda(double tiempoDiferencial);
 	void moverDerecha(double tiempoDiferencial);
 	void subir(double tiempoDiferencial);
@@ -16,7 +17,7 @@ public:
 	void retroceder(double tiempoDiferencial);
 	void detenerse(double tiempoDiferencial);
 	vec3 getCoordenadas();
-	vec3 coordenadas = vec3(0.0f, 3.0f, -70.0f);
+	vec3 coordenadas = vec3(0.0f, 1.3f, -70.0f);
 	int vida = 2;
 	bool rotando = false;
 	double tiempoAcumulado = 0;

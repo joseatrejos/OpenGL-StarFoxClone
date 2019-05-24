@@ -7,12 +7,40 @@
 void Misil::actualizarMatrizModelo() {
 	modelo = mat4(1.0f);
 	modelo = translate(modelo, coordenadas);
+	modelo = rotate(modelo, 1.5708f, vec3(0.0f, 1.0f, 0.0f));
 	modelo = scale(modelo, vec3(1.0f, 1.0f, 1.0f));
 }
 
-void Misil::avanzar() {
-	coordenadas.z += 0.01f;
+void Misil::time(double tiempoDiferencial) {
+	tiempoAcumulado += tiempoDiferencial;
+}
+
+void Misil::desaparecer()
+{
+	renderearBalaEnemiga = true;
+}
+
+void Misil::aparecer(vec3 coordenadasNaveEemiga) {
+	balaEnemigaDisparada = true;
+	coordenadas = coordenadasNaveEemiga + vec3(-0.17f, -0.05f, -1.4f);
 	actualizarMatrizModelo();
+}
+
+void Misil::avanzar(double tiempoDiferencial) {
+	tiempoAcumulado += tiempoDiferencial;
+
+	coordenadas.x += 1.3f * (float)tiempoDiferencial;
+	coordenadas.y -= 0.55f * (float)tiempoDiferencial;
+	coordenadas.z -= 4.75f * (float)tiempoDiferencial;
+	actualizarMatrizModelo();
+
+	// Al exceder el tiempo máximo, la desaparecemos y reiniciamos la distancia
+	if (tiempoAcumulado >= 5.0)
+	{
+		tiempoAcumulado = 0;
+		balaEnemigaDisparada = false;
+		balaEnemigaColisionada = false;
+	}
 }
 
 Misil::Misil() {

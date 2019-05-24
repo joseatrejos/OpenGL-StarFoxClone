@@ -12,7 +12,7 @@ public:
 	void avanzar(double tiempoDiferencial);
 	void actualizarMatrizModelo();
 	vec3 coordenadas = vec3(0.0f, 0.0f, 0.0f);
-	double distanciaRecorrida = 0.0f;
+	double distanciaRecorrida = 0.0;
 	bool balaDisparada = false;
 	bool balaColisionada = false;
 	bool renderearBala = true;
