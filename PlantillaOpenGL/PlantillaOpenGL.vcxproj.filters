@@ -130,14 +130,5 @@
     <None Include="FragmentShader.shader">
       <Filter>Archivos de recursos</Filter>
     </None>
-    <None Include="resources\ikpFlac.dll">
-      <Filter>Archivos de recursos</Filter>
-    </None>
-    <None Include="resources\ikpMP3.dll">
-      <Filter>Archivos de recursos</Filter>
-    </None>
-    <None Include="resources\irrKlang.dll">
-      <Filter>Archivos de recursos</Filter>
-    </None>
   </ItemGroup>
 </Project>
