@@ -16,12 +16,16 @@ vec3 NaveStarFox::getCoordenadas() {
 }
 
 void NaveStarFox::avanzar(double tiempoDiferencial) {
-	coordenadas.z += 5.0 * tiempoDiferencial;
+	coordenadas.z += 11.5f * tiempoDiferencial;
 	actualizarMatrizModelo();
 }
 
+void NaveStarFox::detenerse(double tiempoDiferencial){
+	coordenadas.z -= 11.5f * tiempoDiferencial;
+	actualizarMatrizModelo();
+}
 void NaveStarFox::rapidez(double tiempoDiferencial) {
-	coordenadas.z += 50.0 * tiempoDiferencial;
+	coordenadas.z += 50.0f * tiempoDiferencial;
 	actualizarMatrizModelo();
 }
 

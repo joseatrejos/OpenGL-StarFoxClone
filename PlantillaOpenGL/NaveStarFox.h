@@ -14,6 +14,7 @@ public:
 	void bajar(double tiempoDiferencial);
 	void rapidez(double tiempoDiferencial);
 	void retroceder(double tiempoDiferencial);
+	void detenerse(double tiempoDiferencial);
 	vec3 getCoordenadas();
 	vec3 coordenadas = vec3(0.0f, 3.0f, -70.0f);
 	int vida = 2;
