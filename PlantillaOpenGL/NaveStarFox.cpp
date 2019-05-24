@@ -25,7 +25,20 @@ void NaveStarFox::detenerse(double tiempoDiferencial){
 	actualizarMatrizModelo();
 }
 void NaveStarFox::rapidez(double tiempoDiferencial) {
-	coordenadas.z += 50.0f * tiempoDiferencial;
+	tiempoAcumulado += tiempoDiferencial;
+	if(tiempoAcumulado <= 0.6 && !descanso)
+	{
+		coordenadas.z += 13.0f * tiempoDiferencial;
+	}
+	else if(tiempoAcumulado > 0.6)
+	{
+		descanso = true;
+		if (tiempoAcumulado > 1.5)
+		{
+			descanso = false;
+			tiempoAcumulado = 0;
+		}
+	}
 	actualizarMatrizModelo();
 }
 

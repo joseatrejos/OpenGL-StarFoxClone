@@ -19,6 +19,8 @@ public:
 	vec3 coordenadas = vec3(0.0f, 3.0f, -70.0f);
 	int vida = 2;
 	bool rotando = false;
+	double tiempoAcumulado = 0;
+	bool descanso = 0;
 
 private:
 	void actualizarMatrizModelo();
